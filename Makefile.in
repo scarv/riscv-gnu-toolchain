@@ -163,7 +163,8 @@ stamps/build-binutils-linux: $(srcdir)/riscv-binutils-gdb
 		--disable-werror \
 		--disable-nls \
 		$(BINUTILS_GDB_TARGET_FLAGS) \
-		@enable_gdb@
+		@enable_gdb@ \
+		--disable-sim
 	$(MAKE) -C $(notdir $@)
 	$(MAKE) -C $(notdir $@) install
 	mkdir -p $(dir $@) && touch $@
@@ -295,7 +296,8 @@ stamps/build-binutils-linux-native: $(srcdir)/riscv-binutils-gdb stamps/build-gc
 		--disable-werror \
 		--disable-nls \
 		$(BINUTILS_GDB_NATIVE_FLAGS) \
-		@enable_gdb@
+		@enable_gdb@ \
+		--disable-sim
 	$(MAKE) -C $(notdir $@)
 	$(MAKE) -C $(notdir $@) install
 	mkdir -p $(dir $@) && touch $@
@@ -339,7 +341,8 @@ stamps/build-binutils-newlib: $(srcdir)/riscv-binutils-gdb
 		@with_guile@ \
 		--disable-werror \
 		$(BINUTILS_GDB_TARGET_FLAGS) \
-		@enable_gdb@
+		@enable_gdb@ \
+		--disable-sim
 	$(MAKE) -C $(notdir $@)
 	$(MAKE) -C $(notdir $@) install
 	mkdir -p $(dir $@) && touch $@
