@@ -1,7 +1,7 @@
-RISC-V GNU Compiler Toolchain
-=============================
+SCARV Project RISC-V GNU Compiler Toolchain
+===========================================
 
-[![Build Status](https://travis-ci.org/riscv/riscv-gnu-toolchain.svg?branch=master)](https://travis-ci.org/riscv/riscv-gnu-toolchain)
+[![Build Status](https://travis-ci.org/scarv/riscv-gnu-toolchain.svg?branch=master)](https://travis-ci.org/scarv/riscv-gnu-toolchain)
 
 This is the RISC-V C and C++ cross-compiler. It supports two build modes:
 a generic ELF/Newlib toolchain and a more sophisticated Linux-ELF/glibc
@@ -11,11 +11,11 @@ toolchain.
 
 This repository uses submodules. You need the --recursive option to fetch the submodules automatically
 
-    $ git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+    $ git clone --recursive https://github.com/scarv/riscv-gnu-toolchain
     
 Alternatively :
 
-    $ git clone https://github.com/riscv/riscv-gnu-toolchain
+    $ git clone https://github.com/scarv/riscv-gnu-toolchain
     $ cd riscv-gnu-toolchain
     $ git submodule update --init --recursive
     
