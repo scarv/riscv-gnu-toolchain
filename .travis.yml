@@ -32,7 +32,7 @@ before_install:
   - export CXX=g++-6
   - export CC=gcc-6
 env:
-  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32imcx --with-abi=ilp32"
+  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32imaxc --with-abi=ilp32"
 install: true
 script:
   - ./configure --prefix=/tmp/build-default $CARGS
