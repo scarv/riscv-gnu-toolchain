@@ -25,25 +25,14 @@ addons:
       - texinfo
       - gcc-6
       - g++-6
+git:
+  quiet: false
 before_install:
-  - export MAKEFLAGS="-j3"
+  - export MAKEFLAGS="-j2"
   - export CXX=g++-6
   - export CC=gcc-6
 env:
-#  - CARGS="--enable-linux  --disable-multilib --with-arch=rv32imac --with-abi=ilp32"
-#  - CARGS="--enable-linux  --disable-multilib --with-arch=rv32imafdc --with-abi=ilp32"
-#  - CARGS="--enable-linux  --disable-multilib --with-arch=rv32imafdc --with-abi=ilp32d"
-#  - CARGS="--enable-linux  --disable-multilib --with-arch=rv64imac --with-abi=lp64"
-#  - CARGS="--enable-linux  --disable-multilib --with-arch=rv64imafdc --with-abi=lp64"
-#  - CARGS="--enable-linux  --disable-multilib --with-arch=rv64imafdc --with-abi=lp64d"
   - CARGS="--disable-linux  --disable-multilib --with-arch=rv32imcx --with-abi=ilp32"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32ix --with-abi=ilp32"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32imx --with-abi=ilp32"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32iacx --with-abi=ilp32"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32imacx --with-abi=ilp32"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv32imafcx --with-abi=ilp32f"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv64imacx --with-abi=lp64"
-#  - CARGS="--disable-linux  --disable-multilib --with-arch=rv64imafdcx --with-abi=lp64d"
 install: true
 script:
   - ./configure --prefix=/tmp/build-default $CARGS
