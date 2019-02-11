@@ -25,6 +25,8 @@ addons:
       - texinfo
       - gcc-6
       - g++-6
+git:
+  quiet: false
 before_install:
   - export MAKEFLAGS="-j2"
   - export CXX=g++-6
